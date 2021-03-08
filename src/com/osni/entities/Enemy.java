@@ -50,7 +50,7 @@ public class Enemy extends Entity{
 		//if (Game.rand.nextInt(100) < 30) 
 		
 		moved = false;
-		/*
+		
 		if (this.calculateDistance(this.getX(), this.getY(), Game.player.getX(), Game.player.getY()) < 90 ){
 			if (!playerColliding()) {
 				if ((int)x < Game.player.getX() && World.isFree((int)(x+speed), this.getY(),z)
@@ -90,8 +90,8 @@ public class Enemy extends Entity{
 			
 			}
 		}
-		*/
 		
+		/*
 		if(path == null || path.size() == 0) {
 			Vector2i start = new Vector2i( ((int)(x/16)) , ((int)(y/16)));
 			Vector2i end = new Vector2i( ((int)(Game.player.x/16)), ((int)(Game.player.y/16)));
@@ -100,7 +100,7 @@ public class Enemy extends Entity{
 		
 		
 		followPath(path);
-		
+		*/
 		if (moved) {
 			frames ++;
 			if (frames == maxFrames) {

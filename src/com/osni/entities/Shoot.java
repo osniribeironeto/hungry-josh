@@ -5,7 +5,6 @@ import java.awt.image.BufferedImage;
 
 import com.osni.main.Game;
 import com.osni.world.Camera;
-import com.osni.world.WallTile;
 import com.osni.world.World;
 
 public class Shoot extends Entity{

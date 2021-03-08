@@ -1,10 +1,8 @@
 package com.osni.graphics;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 
-import com.osni.entities.Player;
 import com.osni.main.Game;
 
 public class UI {

@@ -73,9 +73,9 @@ public class Entity {
 	
 	//entity collision
 	public static boolean isColliding(Entity e1, Entity e2){
-		Rectangle e1Mask = new Rectangle(e1.getX()+ e1.maskX, e1.getY()+e1.getY(),e1.getWidth()-2,e1.getHeight()-2);
+		Rectangle e1Mask = new Rectangle(e1.getX()+ e1.maskX, e1.getY()+e1.getY(),e1.getWidth()-2,e1.getHeight()-2);		
 		Rectangle e2Mask = new Rectangle(e2.getX()+ e2.maskX, e1.getY()+e2.getY(),e2.getWidth()-2,e2.getHeight()-2);
-		return e1Mask.intersects(e2Mask) && e1.z == e2.z;
+		return e1Mask.intersects(e2Mask) && e1.z == e2.z;	
 	}
 	
 	//distance calculing

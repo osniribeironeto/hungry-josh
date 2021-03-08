@@ -228,7 +228,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
 				}
 				if (restartGame) {
 					this.restartGame=false;
-					this.gameState="NORMAL";
+					Game.gameState="NORMAL";
 					curLvl=1;
 					String newWorld = "map"+curLvl+".png";
 					World.restartGame(newWorld);
@@ -279,7 +279,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
 		g.setFont(new Font("arial", Font.BOLD, 24));
 		g.drawString("Ammo: " + Game.player.ammo, 550, 28);
 		g.drawString("HP", 45, 24);
-		g.drawString(Game.player.hp +"/"+ Game.player.maxHp,64, 52);
+		g.drawString(Game.player.hp +"/"+ Player.maxHp,64, 52);
 		g.drawString("Score: "+ Enemy.score , 550, 52);
 		if (gameState =="GAMEOVER") {
 			Graphics2D g2 = (Graphics2D) g;
@@ -312,6 +312,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
 		double delta = 0;
+		@SuppressWarnings("unused")
 		int fps = 0;
 		double timer = System.currentTimeMillis();
 		
@@ -373,7 +374,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
 		//menu key
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 				gameState = "MENU";
-				menu.pause=true;
+				Menu.pause=true;
 		}
 		//fake jump
 		if (e.getKeyCode() == KeyEvent.VK_E) {
